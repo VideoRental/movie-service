@@ -1,11 +1,15 @@
 package com.rest.api.movieservice.model;
 
+import java.util.Date;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import lombok.Builder;
 import lombok.Getter;
 import lombok.Setter;
 
 @Document
+@Builder
 @Getter
 @Setter
 public class Movie {
@@ -16,7 +20,7 @@ public class Movie {
 	
 	private String[] genres;
 	
-	private int date;
+	private Date date;
 	
 	private String sinopsis;
 	

@@ -2,6 +2,8 @@ package com.rest.api.movieservice.dto;
 
 import static com.fasterxml.jackson.annotation.JsonInclude.Include.NON_EMPTY;
 
+import java.util.Date;
+
 import javax.validation.constraints.NotNull;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -21,7 +23,7 @@ public class BaseMovieDto {
 	@NotNull
 	private String[] genres;
 	@NotNull
-	private int date;
+	private Date date;
 	@NotNull
 	private String sinopsis;
 	@NotNull

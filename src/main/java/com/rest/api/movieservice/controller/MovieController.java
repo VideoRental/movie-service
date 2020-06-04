@@ -30,13 +30,13 @@ public class MovieController {
 	private static final Logger LOG = getLogger(MovieController.class);
 	
 	@Autowired
-	private MovieService movieService;
+	private MovieService movieService;	
 	@Autowired
 	private ModelMapper mapper;
 
 	@ApiOperation(value = "Add new movie")
 	@PostMapping
-	public ResponseEntity<HttpStatus> addMovie(@RequestBody(required = true) @Valid BaseMovieDto movieDto) {
+	public ResponseEntity<HttpStatus> addMovie(@RequestBody @Valid BaseMovieDto movieDto) {
 		LOG.debug("MovieController - addMovie: {}", movieDto.toString());
 		movieService.addMovie(movieDto);
 		return ResponseEntity.ok(HttpStatus.CREATED);
@@ -52,8 +52,8 @@ public class MovieController {
 
 	@ApiOperation(value = "Find movie")
 	@GetMapping("/{id}")
-	public ResponseEntity<MovieDto> findUser(@PathVariable("id") String movieId) throws Exception {
-		LOG.debug("MovieController - findUser: {}", movieId);
+	public ResponseEntity<MovieDto> findMovie(@PathVariable("id") String movieId) throws Exception {
+		LOG.debug("MovieController - findMovie: {}", movieId);
 		MovieDto dto = mapper.map(movieService.findMovie(movieId), MovieDto.class);
 		return ResponseEntity.ok(dto);
 	}
