@@ -1,4 +1,4 @@
-package com.rest.api.movieservice.controller;
+package com.rest.api.movieservice.unitTest.controller;
 
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.ArgumentMatchers.any;

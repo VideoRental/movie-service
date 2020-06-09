@@ -1,4 +1,4 @@
-package com.rest.api.movieservice.controller;
+package com.rest.api.movieservice.unitTest.controller;
 
 import org.junit.Before;
 import org.junit.runner.RunWith;
@@ -14,7 +14,7 @@ import com.rest.api.movieservice.service.MovieService;
 
 @RunWith(SpringRunner.class)
 @WebMvcTest
-public class AbstractControllerTest {
+public abstract class AbstractControllerTest {
 
 	@Autowired
 	protected MockMvc mockMvc;
